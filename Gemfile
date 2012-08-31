@@ -2,36 +2,29 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
-
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
+gem 'rails-timeago', :git => 'https://github.com/abitno/rails-timeago.git'
+gem 'kaminari'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'redcarpet'
+gem 'nokogiri'
+gem 'coderay'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'unicorn'
+gem 'dalli'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+gem 'capistrano'
+gem 'rvm-capistrano'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+gem 'mongoid'
+gem 'mongoid_slug', :git => 'https://github.com/al/mongoid-slug.git', :branch => 'bugfix-find'
 
-# To use debugger
-# gem 'debugger'
+gem 'image_optim' # Need to install these binaries: advpng, gifsicle, jpegoptim, jpegtran, optipng, pngcrush, pngout
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid', :git => 'https://github.com/jnicklas/carrierwave-mongoid.git', :branch => 'mongoid-3.0'
