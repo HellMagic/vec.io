@@ -8,6 +8,64 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap/css/bootstrap
+ *= require font-awesome/css/font-awesome
+ *= require codemirror/lib/codemirror
+ *= require highlight/styles/default
+ *= require jquery-ui/css/flick/jquery-ui-1.8.21.custom
+ *= require jQuery-File-Upload/css/bootstrap-image-gallery.min
+ *= require jQuery-File-Upload/css/jquery.fileupload-ui
+ *= require tag-it/css/jquery.tagit
+ *= require tag-it/css/tagit.ui-zendesk
  *= require_self
  *= require_tree .
  */
+
+em {
+  font-weight: bold;
+  color: #333333;
+}
+
+blockquote {
+  margin-left: 12px;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+form {
+  margin: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+textarea {
+  box-sizing: border-box;
+  height: 28px;
+  width: 100%;
+}
+
+pre, code, input, textarea, select {
+  border-radius: 0 !important;
+}
+
+label, input {
+  vertical-align: middle;
+}
+
+input[type='checkbox'] + label {
+  display: inline;
+}

@@ -1,0 +1,96 @@
+/*
+ * For pagination with bootstrap and kaminari
+ */
+.pagination {
+  box-shadow: 0 0 1px #999999;
+  border: 4px solid #F2F2F2;
+  background: #FFFFFF;
+  margin-bottom: 40px;
+  padding: 10px 16px 2px;
+}
+
+.pagination span {
+  border: 1px solid #DDDDDD;
+  margin: 0 4px;
+  padding: 5px 0;
+  line-height: 18px;
+  float: left;
+  background: #FFFFFF;
+}
+
+.pagination span a {
+  float: none;
+  border-width: 0;
+  padding: 5px 10px;
+  line-height: 16px;
+}
+
+.pagination span.current, .pagination span.gap {
+  color: #999999;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.pagination span.gap {
+  border-width: 0;
+  padding: 5px;
+}
+
+@media (max-width: 480px) {
+  .pagination span.page {
+    display: none;
+  }
+  .pagination span.current {
+    display: block;
+  }
+}
+
+
+/*
+ * For CodeMirror editor
+ */
+.CodeMirror {
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 1.5em;
+  color: #555555;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.CodeMirror-scroll {
+  height: auto;
+  min-height: 256px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: 100%
+}
+
+.CodeMirror:hover {
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+
+/*
+ * For font awesome
+ */
+i, .icon-large:before {
+  vertical-align: middle;
+}
+
+
+/*
+ * For tag it
+ */
+.tagit {
+  margin-bottom: 9px;
+  border-radius: 0;
+}
+
+.tagit-new input[type="text"].ui-autocomplete-input {
+  height: auto;
+  box-shadow: none;
+}

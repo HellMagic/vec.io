@@ -1,0 +1,28 @@
+en:
+  domain: vec.io
+  session_key: _vec_io_session_mem_cache_secure
+
+  memcache:
+    servers:
+      - 127.0.0.1
+    options:
+      namespace: _vec_io_cache_dalli
+      expires_in: <%= 1.day %>
+      compress: true
+
+  html:
+    title: VEC.IO
+    keywords: vector,matrix,graphics,OpenGL,cv,computer vision,FFmpeg,Android,Ruby,Rails,VPlayer
+    description: Focus on high performance technology, do it
+
+  email:
+    default: root@vec.io
+    smtp:
+      host: smtp.vec.io
+      port: 25
+      user_name: root@vec.io
+      password: vec.io
+
+  google_analytics:
+    account: UA-5406207-5
+    domain: vec.io

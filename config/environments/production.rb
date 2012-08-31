@@ -25,7 +25,7 @@ VecIo::Application.configure do
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -40,16 +40,14 @@ VecIo::Application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :dalli_store, Preference.memcache.servers, Preference.memcache.options.to_hash
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-
-  # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.assets.precompile += ['jQuery-File-Upload/js/*.js']
 
   # Enable threaded mode
   # config.threadsafe!
@@ -61,4 +59,17 @@ VecIo::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => Preference.domain }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => Preference.email.smtp.host,
+    :port                 => Preference.email.smtp.port,
+    :domain               => Preference.domain,
+    :user_name            => Preference.email.smtp.user_name,
+    :password             => Preference.email.smtp.password,
+    :authentication       => 'plain',
+    :enable_starttls_auto => true,
+  }
 end

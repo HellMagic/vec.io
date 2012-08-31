@@ -9,6 +9,7 @@ end
 
 gem 'jquery-rails'
 gem 'rails-timeago', :git => 'https://github.com/abitno/rails-timeago.git'
+gem 'rails_config_i18n'
 gem 'kaminari'
 
 gem 'redcarpet'
