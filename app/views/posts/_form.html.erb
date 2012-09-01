@@ -1,0 +1,33 @@
+<%= form_for(@post, :html => { :class => 'block post post-form'}) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content, 'data-preview' => '.mdpreview' %>
+    <div class="mdpreview content"></div>
+  </div>
+  <div class="field">
+    <%= f.label :tags %>
+    <%= f.text_field :tags_str, :class => 'tagit' %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class => 'btn' %>
+  </div>
+  <div class="attachable">
+    <%= hidden_field_tag(:attachable_type, @post.class.name) unless @post.new_record? %>
+    <%= hidden_field_tag(:attachable_id, @post.id) unless @post.new_record? %>
+    <% @post.assets.each do |asset| %>
+      <%= hidden_field_tag 'asset_ids[]', asset.id %>
+    <% end %>
+  </div>
+<% end %>
+
+<div class="block">
+  <%= render 'assets/form' %>
+</div>

@@ -16,6 +16,8 @@ gem 'redcarpet'
 gem 'nokogiri'
 gem 'coderay'
 
+gem 'devise'
+
 gem 'unicorn'
 gem 'dalli'
 

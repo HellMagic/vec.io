@@ -1,0 +1,20 @@
+class Tag
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  include Mongoid::Slug
+
+  attr_accessible :title, :count
+
+  field :title, type: String
+  field :count, type: Integer, default: 0
+
+  index({ title: 1 }, { unique: true })
+  index(count: 1)
+
+  slug :title
+
+  validates_presence_of :title, allow_blank: false
+  validates_uniqueness_of :title, case_sensitive: false, allow_blank: true
+
+  has_and_belongs_to_many :posts
+end

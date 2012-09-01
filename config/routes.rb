@@ -1,6 +1,12 @@
 VecIo::Application.routes.draw do
   root :to => 'root#index'
 
+  devise_for :users, :path => "/account", :path_names => { :sign_in => 'signin', :sign_out => 'signout', :password => 'password', :registration => '', :sign_up => 'signup' }
+
+  resources :posts
+  resources :assets, :path => '/files/'
+  resources :tags, :only => [:index, :show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

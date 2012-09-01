@@ -8,10 +8,11 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <script type="text/javascript">document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';document.cookie='ratio='+("devicePixelRatio" in window ? devicePixelRatio : "1")+'; path=/';</script>
     <%= javascript_include_tag "application" %>
-    <%= timeago_script_tag %>
     <%= csrf_meta_tags %>
   </head>
   <%= content_tag :body do %>
+    <%= render 'shared/flashes' %>
+    <%= yield %>
     <%= render 'shared/ga' %>
   <% end %>
 </html>
