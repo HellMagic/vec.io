@@ -1,23 +1,21 @@
-<%= form_for(@post, :html => { :class => 'block post post-form'}) do |f| %>
+<%= form_for(@post, :html => { :class => 'block-content post post-form'}) do |f| %>
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => t('mongoid.attributes.post.title') %>
   </div>
   <div class="field">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
+    <%= f.text_field :slug, :placeholder => t('mongoid.attributes.post.slug') %>
   </div>
   <div class="field">
-    <%= f.label :content %>
     <%= f.text_area :content, 'data-preview' => '.mdpreview' %>
     <div class="mdpreview content"></div>
   </div>
   <div class="field">
-    <%= f.label :tags %>
     <%= f.text_field :tags_str, :class => 'tagit' %>
   </div>
   <div class="actions">
     <%= f.submit :class => 'btn' %>
+    <%= link_to raw("<i class='icon-file'></i>"), 'javascript:void(0);', :class => 'pull-right expanding-button', 'data-target' => '.expanding-target' %>
+    <%= f.check_box :published, :class => 'pull-right' %>
   </div>
   <div class="attachable">
     <%= hidden_field_tag(:attachable_type, @post.class.name) unless @post.new_record? %>
@@ -28,6 +26,6 @@
   </div>
 <% end %>
 
-<div class="block">
+<div class="expanding-target">
   <%= render 'assets/form' %>
 </div>

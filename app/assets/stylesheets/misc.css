@@ -51,13 +51,10 @@
  */
 .CodeMirror {
   margin-bottom: 9px;
-  font-size: 13px;
   line-height: 1.5em;
   color: #555555;
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
 .CodeMirror-scroll {
@@ -66,11 +63,6 @@
   overflow-y: hidden;
   overflow-x: auto;
   width: 100%
-}
-
-.CodeMirror:hover {
-  border-color: rgba(82, 168, 236, 0.8);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
 
@@ -93,4 +85,102 @@ i, .icon-large:before {
 .tagit-new input[type="text"].ui-autocomplete-input {
   height: auto;
   box-shadow: none;
+}
+
+
+/*
+ * For bootstrap
+ */
+em {
+  font-weight: bold;
+  color: #333333;
+}
+
+blockquote {
+  margin-left: 12px;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+form {
+  margin: 0;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: none;
+  border-radius: 0;
+  height: 28px;
+  width: 100%;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+  box-shadow: none;
+  border-color: #CCCCCC;
+}
+
+pre, code, input, textarea, select {
+  border-radius: 0;
+}
+
+label, input {
+  vertical-align: middle;
+}
+
+input[type='checkbox'] + label {
+  display: inline;
+}
+
+.alert, .btn {
+  border-radius: 0;
+}
+
+.alert {
+  padding-left: 16px;
+}
+
+.alert .close {
+  right: -16px;
+}
+
+.progress {
+  height: 16px;
 }

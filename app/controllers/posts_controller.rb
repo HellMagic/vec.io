@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :find_post, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.published.page(params[:page])
 
     respond_to do |format|
       format.html
@@ -12,6 +12,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    render_404 unless user_signed_in? || @post.published?
+
     respond_to do |format|
       format.html
       format.json { render json: @post }

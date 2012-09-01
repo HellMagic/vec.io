@@ -11,8 +11,11 @@
     <%= csrf_meta_tags %>
   </head>
   <%= content_tag :body do %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= render 'shared/ga' %>
+    <%= render 'shared/nav' %>
+    <div class="container main">
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+      <%= render 'shared/ga' %>
+    </div>
   <% end %>
 </html>

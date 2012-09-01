@@ -1,0 +1,9 @@
+en:
+  mongoid:
+    models:
+      post: "Post"
+    attributes:
+      post:
+        slug: "Slug"
+        title: "Title"
+        content: "Content"

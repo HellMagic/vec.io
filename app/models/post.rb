@@ -3,8 +3,9 @@ class Post
   include Mongoid::Timestamps
   include Mongoid::Slug
 
-  attr_accessible :slug, :title, :content, :tags, :tags_str
+  attr_accessible :published, :slug, :title, :content, :tags, :tags_str
 
+  field :published, type: Boolean
   field :slug, type: String
   field :title, type: String
   field :content, type: String
@@ -20,6 +21,10 @@ class Post
   belongs_to :user, index: true
   has_many :assets, as: :attachable, autosave: true, dependent: :destroy
   has_and_belongs_to_many :tags, autosave: true
+
+  paginates_per 16
+
+  scope :published, where(published: true)
 
   def tags_str
     self.tags.map(&:title).join(',')

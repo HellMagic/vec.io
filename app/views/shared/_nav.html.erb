@@ -1,0 +1,6 @@
+<nav>
+  <ul class="container">
+    <li class="<%= 'current' if controller.controller_name == 'root' %>"><%= link_to '/home/vecio', root_path %></li>
+    <li class="<%= 'current' if controller.controller_name == 'posts' %>"><%= link_to '~/posts', posts_path %></li>
+  </ul>
+</nav>

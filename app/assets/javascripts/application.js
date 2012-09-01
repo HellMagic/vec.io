@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui/js/jquery-ui-1.8.21.custom.min
+//= require jquery-ui/js/jquery-ui-1.8.23.custom.min
 //= require jquery-plugins/jquery.cookie
 //= require jquery-plugins/jquery.color
 //= require jquery-plugins/jquery.hotkeys
@@ -87,6 +87,10 @@ jQuery(function ($) { $(document).ready(function(){
         }
       });
     },
+  });
+
+  $('.expanding-button').live('click', function(e){
+    $($(this).data('target')).slideToggle();
   });
 
 }); });
