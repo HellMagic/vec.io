@@ -72,6 +72,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def feed
+    @posts = Post.published.desc(:created_at).limit(16)
+
+    respond_to do |format|
+      format.atom
+    end
+  end
+
   private
   def find_post
     @post = Post.find(params[:id])

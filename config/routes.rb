@@ -1,5 +1,6 @@
 VecIo::Application.routes.draw do
   root :to => 'root#index'
+  get '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   devise_for :users, :path => "/account", :path_names => { :sign_in => 'signin', :sign_out => 'signout', :password => 'password', :registration => '', :sign_up => 'signup' }
 
