@@ -1,10 +1,12 @@
-<div class="post block">
-  <h1 class="post-header block-header">
-    <%= link_to post.title, post %>
-    <%= timeago post.created_at %>
-  </h2>
-  <hr class="double-line" />
-  <div class="block-content content">
-    <%= markdown post.content %>
+<%= cache "posts/#{post.slug}/#{post.updated_at}" do %>
+  <div class="post block">
+    <h1 class="post-header block-header">
+      <%= link_to post.title, post %>
+      <%= timeago post.created_at %>
+    </h2>
+    <hr class="double-line" />
+    <div class="block-content content">
+      <%= markdown post.content %>
+    </div>
   </div>
-</div>
+<% end %>
