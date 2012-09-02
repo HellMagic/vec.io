@@ -1,6 +1,16 @@
-<nav>
-  <ul class="container">
-    <li class="<%= 'current' if controller.controller_name == 'root' %>"><%= link_to '/home/vecio', root_path %></li>
-    <li class="<%= 'current' if controller.controller_name == 'posts' %>"><%= link_to '~/posts', posts_path %></li>
+<nav class="container">
+  <ul>
+    <li<%= ' class=current' if controller.controller_name == 'root' %>><%= link_to '/home/vecio', root_path %></li>
+    <li<%= ' class=current' if controller.controller_name == 'posts' %>><%= link_to '~/posts', posts_path %></li>
+    <li class="pull-right"><%= link_to raw('<i class="icon-rss"></i>'), '' %></li>
+    <% if user_signed_in? %>
+      <% if controller.controller_name == 'posts' && %w[edit update].include?(controller.action_name) %>
+        <li class="pull-right"><%= link_to raw('<i class="icon-eye-open"></i>'), @post %></li>
+      <% elsif controller.controller_name == 'posts' && %w[show].include?(controller.action_name) %>
+        <li class="pull-right"><%= link_to raw('<i class="icon-edit"></i>'), edit_post_path(@post) %></li>
+      <% else %>
+        <li class="pull-right"><%= link_to raw('<i class="icon-plus"></i>'), new_post_path %></li>
+      <% end %>
+    <% end %>
   </ul>
 </nav>

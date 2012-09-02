@@ -91,6 +91,15 @@ i, .icon-large:before {
 /*
  * For bootstrap
  */
+body {
+  font-family: 'Quantico', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Russo One';
+  font-weight: normal;
+}
+
 em {
   font-weight: bold;
   color: #333333;
@@ -169,16 +178,22 @@ input[type='checkbox'] + label {
   display: inline;
 }
 
+code, pre {
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+
+code {
+  font-size: 12px;
+  padding: 0 2px;
+}
+
+pre {
+  font-size: 11px;
+  padding: 4px 6px;
+}
+
 .alert, .btn {
   border-radius: 0;
-}
-
-.alert {
-  padding-left: 16px;
-}
-
-.alert .close {
-  right: -16px;
 }
 
 .progress {
