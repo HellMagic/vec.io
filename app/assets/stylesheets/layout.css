@@ -2,7 +2,7 @@ header {
   background: #2D2D2D;
   border-bottom: 1px solid #000000;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   top: 0;
   width: 100%;
   height: 27px;
@@ -11,8 +11,20 @@ header {
   font-weight: bold;
 }
 
-header nav ul {
-  margin: 0 -8px;
+header nav {
+  padding: 0 8px;
+}
+
+header .nav-center {
+  text-align: center;
+  line-height: 27px;
+  color: #000000;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125)
+}
+
+header ul {
+  margin-top: -27px;
 }
 
 header ul li {
@@ -29,6 +41,10 @@ header a:hover,
 header .current a {
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.container-full {
+  padding: 0 16px;
 }
 
 .main {
@@ -121,8 +137,8 @@ header .current a {
     margin: 0 -20px;
   }
 
-  header nav {
-    padding: 0 20px;
+  .container-full {
+    margin: 64px -20px;
   }
 
   .block-header {
@@ -135,8 +151,20 @@ header .current a {
 }
 
 @media (max-width: 480px) {
+  header .nav-center {
+    display: none;
+  }
+
+  header ul {
+    margin-top: 0;
+  }
+
   .main {
     margin-top: 32px;
+  }
+
+  .container-full {
+    margin: 64px -20px;
   }
 
   .block {

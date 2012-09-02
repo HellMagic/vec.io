@@ -3,11 +3,12 @@ class PostsController < ApplicationController
   before_filter :find_post, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.published.page(params[:page])
+    @tags = Tag.desc(:count)
+    @posts = Post.published.desc(:created_at)
 
     respond_to do |format|
-      format.html
-      format.json { render json: @posts }
+      format.html { render :index, layout: 'full' }
+      format.json { render json: @posts.page(params[:page]) }
     end
   end
 

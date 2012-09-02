@@ -2,11 +2,11 @@
  * For pagination with bootstrap and kaminari
  */
 .pagination {
-  box-shadow: 0 0 1px #999999;
-  border: 4px solid #F2F2F2;
+  border: 1px solid #E7E7E7;
   background: #FFFFFF;
   margin-bottom: 40px;
   padding: 10px 16px 2px;
+  font-size: 12px;
 }
 
 .pagination span {
@@ -97,7 +97,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Russo One';
+  font-family: 'Russo One', sans-serif;
   font-weight: normal;
 }
 

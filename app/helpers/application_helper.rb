@@ -4,7 +4,7 @@ module ApplicationHelper
     Redcarpet::Markdown.render(text).try(:html_safe)
   end
 
-  def md2plain(text)
+  def plain(text)
     doc = Nokogiri::HTML(markdown(text))
     doc.xpath("//text()").to_s
   end
@@ -20,15 +20,18 @@ module ApplicationHelper
   end
 
   def html_title
-    Preference.html.title
+    title = @post && @post.title || @tag && @tag.title
+    title.blank? ? Preference.html.title : title + ' | ' + Preference.html.title
   end
 
   def html_keywords
-    Preference.html.keywords
+    tags = @post && @post.tags.map(&:title).join(',')
+    tags.blank? ? Preference.html.keywords : tags
   end
 
   def html_description
-    Preference.html.description
+    desc = @post && @post.content
+    desc.blank? ? Preference.html.description : plain(desc)[0..160]
   end
 
 end
