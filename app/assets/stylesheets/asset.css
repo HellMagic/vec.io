@@ -1,5 +1,5 @@
 .fileupload-buttonbar {
-  padding: 0 12px 8px;
+  padding: 0 32px 8px;
 }
 
 .fileupload-buttonbar .progress, .fileupload-buttonbar .progress-extended {
@@ -16,6 +16,10 @@
   margin-bottom: 14px;
 }
 
+#fileupload .preview {
+  padding-left: 32px;
+}
+
 #fileupload .preview img {
   max-width: 80px;
 }
@@ -24,4 +28,24 @@
   border-top: 0 none;
   border-bottom: 1px solid #DDDDDD;
   padding: 8px 12px;
+}
+
+@media (max-width: 767px) {
+  #fileupload .preview {
+    padding-left: 16px;
+  }
+
+  .fileupload-buttonbar {
+    padding: 0 16px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #fileupload .preview {
+    padding-left: 0;
+  }
+
+  .fileupload-buttonbar {
+    padding: 0 0 8px;
+  }
 }

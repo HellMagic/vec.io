@@ -15,7 +15,7 @@
   <div class="actions">
     <%= f.submit :class => 'btn' %>
     <%= link_to raw("<i class='icon-file'></i>"), 'javascript:void(0);', :class => 'pull-right expanding-button', 'data-target' => '.expanding-target' %>
-    <%= f.check_box :published, :class => 'pull-right' %>
+    <%= f.check_box :published, :class => 'pull-right post-published' %>
   </div>
   <div class="attachable">
     <%= hidden_field_tag(:attachable_type, @post.class.name) unless @post.new_record? %>

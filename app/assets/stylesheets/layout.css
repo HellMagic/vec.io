@@ -107,6 +107,10 @@ header .current a {
   clear: both;
 }
 
+.expanding-button:hover {
+  text-decoration: none;
+}
+
 .expanding-target {
   display: none;
 }
@@ -119,5 +123,31 @@ header .current a {
 
   header nav {
     padding: 0 20px;
+  }
+
+  .block-header {
+    padding: 8px 16px;
+  }
+
+  .block-content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    margin-top: 32px;
+  }
+
+  .block {
+    border: 0 none;
+  }
+
+  .block-header {
+    padding: 8px 0;
+  }
+
+  .block-content {
+    padding: 16px 0;
   }
 }

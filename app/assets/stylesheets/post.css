@@ -4,3 +4,28 @@
   font-size: 14px;
   line-height: 1.5em;
 }
+
+.post-form {
+  padding: 32px;
+}
+
+.post-form .post-published {
+  margin: 8px;
+}
+
+.post-form .expanding-button {
+  margin: 8px 0 8px 8px;
+  line-height: 1em;
+}
+
+@media (max-width: 767px) {
+  .post-form {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-form {
+    padding: 16px 0;
+  }
+}
