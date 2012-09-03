@@ -4,7 +4,12 @@ VecIo::Application.routes.draw do
 
   devise_for :users, :path => "/account", :path_names => { :sign_in => 'signin', :sign_out => 'signout', :password => 'password', :registration => '', :sign_up => 'signup' }
 
-  resources :posts
+  resources :posts do
+    collection do
+      get 'drafts'
+    end
+  end
+
   resources :assets, :path => '/files/'
   resources :tags, :only => [:index, :show]
 

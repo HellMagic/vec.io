@@ -12,6 +12,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def drafts
+    @posts = Post.where(published: false).desc(:updated_at).page(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
+  end
+
   def show
     render_404 unless user_signed_in? || @post.published?
 
