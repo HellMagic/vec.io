@@ -78,7 +78,7 @@
 .post-tags li a {
   color: #CCCCCC;
   font-size: 12px;
-  font-family: 'Droid Sans Mono', sans-serif;
+  font-family: 'Droid Sans Mono', monospace;
 }
 
 .post-tags li a:hover {

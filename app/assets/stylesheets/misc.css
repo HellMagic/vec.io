@@ -194,7 +194,7 @@ input[type='checkbox'] + label {
 }
 
 code, pre {
-  font-family: 'Droid Sans Mono', sans-serif;
+  font-family: 'Droid Sans Mono', monospace;
 }
 
 code {

@@ -12,12 +12,15 @@ gem 'rails-timeago', :git => 'https://github.com/abitno/rails-timeago.git'
 gem 'rails_config_i18n'
 gem 'kaminari'
 
+gem 'sitemap_generator'
+
 gem 'redcarpet'
 gem 'nokogiri'
 gem 'coderay'
 
 gem 'devise'
 
+gem 'whenever'
 gem 'unicorn'
 gem 'dalli'
 
