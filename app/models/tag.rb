@@ -17,4 +17,6 @@ class Tag
   validates_uniqueness_of :title, case_sensitive: false, allow_blank: true
 
   has_and_belongs_to_many :posts
+
+  scope :used, where(:count.gt => 0)
 end

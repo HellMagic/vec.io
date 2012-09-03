@@ -5,8 +5,17 @@
       <%= timeago post.created_at %>
     </h2>
     <hr class="double-line" />
-    <div class="block-content content">
-      <%= markdown post.content %>
+    <div class="block-content">
+      <% unless post.tags.blank? %>
+        <ul class="post-tags clearfix">
+          <% post.tags.each do |tag| %>
+            <li><%= link_to tag.title, tag %></li>
+          <% end %>
+        </ul>
+      <% end %>
+      <div class="content">
+        <%= markdown post.content %>
+      </div>
     </div>
   </div>
 <% end %>

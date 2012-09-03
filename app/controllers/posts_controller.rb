@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :find_post, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @tags = Tag.desc(:count)
+    @tags = Tag.used.desc(:count)
     @posts = Post.published.desc(:created_at)
 
     respond_to do |format|

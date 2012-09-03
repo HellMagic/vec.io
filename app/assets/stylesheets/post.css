@@ -3,7 +3,7 @@
 }
 
 .posts-archive {
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .posts-archive time {
@@ -21,7 +21,7 @@
 }
 
 .posts-list li {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   list-style: decimal;
 }
 
@@ -30,6 +30,28 @@
   width: 256px;
   border-left: 8px solid #EEEEEE;
   padding-left: 16px;
+}
+
+.posts-tags ul li:before {
+  content: "\f02b";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  color: #AAAAAA;
+  display: inline-block;
+  text-decoration: inherit;
+  font-size: 70%;
+  padding-right: 8px;
+  vertical-align: middle;
+}
+
+.posts-tags ul li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  margin-bottom: 8px;
 }
 
 .post-header a {
@@ -41,10 +63,27 @@
 }
 
 .post-header time {
+  font-family: 'Quantico', sans-serif;
   float: right;
   color: #CCCCCC;
-  font-size: 14px;
-  line-height: 1.5em;
+  font-size: 12px;
+}
+
+.post-tags li {
+  float: right;
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+
+.post-tags li a {
+  color: #CCCCCC;
+  font-size: 12px;
+  font-family: 'Droid Sans Mono', sans-serif;
+}
+
+.post-tags li a:hover {
+  color: #AAAAAA;
+  text-decoration: none;
 }
 
 .post-form {
@@ -76,7 +115,14 @@
   }
 
   .posts-tags {
-    width: 25%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 28%;
+  }
+
+  .posts-tags ul li {
+    width: 100%;
   }
 
   .posts-archive time {
@@ -106,6 +152,10 @@
     width: 100%;
     padding: 0 0 16px;
     margin: -16px 0 32px;
+  }
+
+  .posts-tags ul li {
+    width: 50%;
   }
 
   .post-form {

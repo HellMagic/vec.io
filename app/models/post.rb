@@ -38,10 +38,10 @@ class Post
   end
 
   after_save do |p|
-    p.tags.each { |t| t.set(:count, t.posts.count) }
+    p.tags.each { |t| t.set(:count, t.posts.published.count) }
   end
 
   after_destroy do |p|
-    p.tags.each { |t| t.set(:count, t.posts.count) }
+    p.tags.each { |t| t.set(:count, t.posts.published.count) }
   end
 end
