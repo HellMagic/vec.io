@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(email: 'root@vec.io', password: 'root@vec.io', name: 'Cedric Fung')
+User.create(email: 'root@vec.io', password: 'root@vec.io', name: 'Cedric Fung', location: [40.000233, 116.422205])

@@ -1,0 +1,34 @@
+<section class="fixed-typography"><%= @user.name %></section>
+
+<section class="info-block">
+  <h1>$ info me</h1>
+  <p><%= @user.name %><br /><%= '*' * @user.name.length %></p>
+  <p>
+    <i class="icon-envelope"></i> <%= @user.email %><br />
+    <i class="icon-home"></i> <%= @user.location.join(' x ') %>
+  </p>
+  <p>I love programming, wanna be a real programmer. I have been programming since 2007, when I got my first computer. I have experiences in these technologies:</p>
+  <dl>
+    <dt>Linux</dt>
+    <dd>- The operating system which I used since my first touch to computer. Besides using it fluently, I can also write simple bash scripts, configure kernel parameters, deploy various services (nginx, Java Servlet, etc) and install it as my only OS on my Macbook Pro.</dd>
+    <dt>Ruby</dt>
+    <dd>- The programming language I'm most familiar with. I learnt it since 2008 and have been using it to write all my server code.</dd>
+    <dt>ASM/C/Java</dt>
+    <dd>- A real programmer may not list the languages it can speak to demonstrate its abillity. When comes to me, I've written several Android apps using Java, it's also the language I'm taught in my computer courses, which also include ASM and C. The most famous app I create may be VPlayer and Vitamio, populated with thousands of lines of Java, C and ASM code.</dd>
+    <dt>Web</dt>
+    <dd>- I write most code for websites and web apps, the website you're watching is written with all popular words: Rails, CSS3, HTML5, MongoDB, Markdown, etc.</dd>
+    <dt>Graphics</dt>
+    <dd>- When come to graphics, I don't mean drawing. I'm learning many graphics related technologies right now, inlcuding OpenGL, OpenCV, and some graphics algorithms. I'm a junior graphics programmer. Oh, GPGPU is included too.</dd>
+  </dl>
+</section>
+
+<section class="info-block">
+  <h1>$ find ~/projects | xargs info</h1>
+  <p>I love Linux, love open source. However, I haven't given many efforts to open source community. I'm shamed of that, and struggling to change it.</p>
+  <dl>
+    <dt>VPlayer</dt>
+    <dd>- I wrote VPlayer with FFmpeg, OpenGL, Java, several Android private interfaces and many other technologies. At the beginning, I wanna create an open source video player for Android, but finally it grew into an commercial software and betrayed to the 'free forever' annoucement, which shamed me. I call it the best video player for Android, however many other video players are better than VPlayer in different aspects. I like MX Player and Dice Player, too.</dd>
+    <dt>Vitamio</dt>
+    <dd>- None can regret to its fault. I created Vitamio to make all developers able to build Android apps with powerful multimedia support. It's not open sourced, but it's free. I shall try my best to promise it. Indeed, I'my only a simple staff of my company.</dd>
+  </dl>
+</section>

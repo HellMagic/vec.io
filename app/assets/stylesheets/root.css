@@ -1,0 +1,42 @@
+.fixed-typography {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 128px;
+  font-weight: bold;
+  color: #F4F4F4;
+  line-height: 1.2em;
+  text-align: center;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.info-block {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Droid Sans Mono', sans-serif;
+  font-size: 12px;
+  line-height: 1.5em;
+  padding: 0 16px;
+  width: 50%;
+  float: left;
+  border-left: 8px solid #EEEEEE;
+}
+
+.info-block h1 {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-top: 0;
+}
+
+.info-block dd {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 767px) {
+  .info-block {
+    width: 100%;
+  }
+}
