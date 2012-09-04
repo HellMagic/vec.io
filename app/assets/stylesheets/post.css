@@ -55,6 +55,7 @@
 }
 
 .post-header a {
+  display: table-cell;
   color: inherit;
 }
 
@@ -64,9 +65,13 @@
 
 .post-header time {
   font-family: 'Quantico', sans-serif;
-  float: right;
   color: #CCCCCC;
   font-size: 12px;
+  line-height: 1em;
+  float: right;
+  display: table-cell;
+  vertical-align: bottom;
+  margin-top: -1.5em;
 }
 
 .post-tags li {
