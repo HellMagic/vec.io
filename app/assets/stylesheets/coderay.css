@@ -51,7 +51,7 @@ ol.CodeRay li { white-space: pre }
 .CodeRay .char .delimiter { color:#039 }
 .CodeRay .class { color:#458; font-weight:bold }
 .CodeRay .complex { color:#A08; font-weight:bold }
-.CodeRay .constant { color:teal; }
+.CodeRay .constant { color:#3F6; }
 .CodeRay .color { color:#0A0 }
 .CodeRay .class-variable { color:#369 }
 .CodeRay .decorator { color:#B0B; }
@@ -67,7 +67,7 @@ ol.CodeRay li { white-space: pre }
 .CodeRay .exception { color:#C00; font-weight:bold }
 .CodeRay .filename { color:#099; }
 .CodeRay .function { color:#900; font-weight:bold }
-.CodeRay .global-variable { color:teal; font-weight:bold }
+.CodeRay .global-variable { color:#3F6; font-weight:bold }
 .CodeRay .hex { color:#058; font-weight:bold }
 .CodeRay .integer  { color:#099; }
 .CodeRay .include { color:#B44; font-weight:bold }
@@ -78,7 +78,7 @@ ol.CodeRay li { white-space: pre }
 .CodeRay .inline-delimiter { color: #D14; }
 .CodeRay .important { color:#f00; }
 .CodeRay .interpreted { color:#B2B; font-weight:bold }
-.CodeRay .instance-variable { color:teal }
+.CodeRay .instance-variable { color:#3F6 }
 .CodeRay .label { color:#970; font-weight:bold }
 .CodeRay .local-variable { color:#963 }
 .CodeRay .octal { color:#40E; font-weight:bold }
@@ -88,9 +88,9 @@ ol.CodeRay li { white-space: pre }
 .CodeRay .preprocessor { color:#579; }
 .CodeRay .pseudo-class { color:#00C; font-weight:bold }
 .CodeRay .predefined-type { color:#074; font-weight:bold }
-.CodeRay .reserved, .keyword  { color:#8F0; font-weight:bold }
+.CodeRay .reserved, .keyword  { color:#690; font-weight:bold }
 
-.CodeRay .key { color: #808; }
+.CodeRay .key { color: #f80; }
 .CodeRay .key .delimiter { color: #606; }
 .CodeRay .key .char { color: #80f; }
 .CodeRay .value { color: #088; }
@@ -104,7 +104,7 @@ ol.CodeRay li { white-space: pre }
 .CodeRay .string { color: #D20; }
 .CodeRay .string .string { }
 .CodeRay .string .string .string { background-color:#ffd0d0 }
-.CodeRay .string .content { color: #D14; }
+.CodeRay .string .content { color: #88D; }
 .CodeRay .string .char { color: #D14; }
 .CodeRay .string .delimiter { color: #D14; }
 
@@ -112,7 +112,7 @@ ol.CodeRay li { white-space: pre }
 .CodeRay .shell .content { }
 .CodeRay .shell .delimiter { color:#D14 }
 
-.CodeRay .symbol { color:#990073 }
+.CodeRay .symbol { color:#D0C }
 .CodeRay .symbol .content { color:#A60 }
 .CodeRay .symbol .delimiter { color:#630 }
 
