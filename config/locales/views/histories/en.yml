@@ -1,0 +1,7 @@
+en:
+  flash:
+    histories:
+      success:
+        create: "Successfully create a new history."
+        update: "Successfully update the history."
+        destroy: "Successfully delete the history."

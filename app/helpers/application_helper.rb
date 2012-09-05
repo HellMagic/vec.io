@@ -9,6 +9,10 @@ module ApplicationHelper
     doc.xpath("//text()").to_s
   end
 
+  def diff(o, m)
+    Diffy::Diff.new(o, m, diff: '-u', include_diff_info: true, include_plus_and_minus_in_html: false, allow_empty_diff: true).to_s(:html).html_safe
+  end
+
   def timeago(time, options = {})
     timeago_tag(time.utc, options.reverse_merge(:limit => 7.days.ago))
   end

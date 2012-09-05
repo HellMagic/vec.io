@@ -2,6 +2,7 @@ class Post
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Slug
+  include Mongoid::History::Trackable
 
   attr_accessible :published, :slug, :title, :content, :tags, :tags_str
 
@@ -23,6 +24,8 @@ class Post
   has_and_belongs_to_many :tags, autosave: true
 
   paginates_per 16
+
+  track_history :on => [:published, :slug, :title, :content]
 
   scope :published, where(published: true)
 
