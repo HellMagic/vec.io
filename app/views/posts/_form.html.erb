@@ -6,8 +6,7 @@
     <%= f.text_field :slug, :placeholder => t('mongoid.attributes.post.slug') %>
   </div>
   <div class="field">
-    <%= f.text_area :content, 'data-preview' => '.mdpreview' %>
-    <div class="mdpreview content"></div>
+    <%= f.text_area :content %>
   </div>
   <div class="field">
     <%= f.text_field :tags_str, :class => 'tagit' %>

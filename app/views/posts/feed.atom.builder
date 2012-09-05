@@ -1,4 +1,4 @@
-cache "feed/#{@posts.first.updated_at}" do
+cache @posts do
   atom_feed :language => 'en-US' do |feed|
     feed.title Preference.html.title
     feed.updated @posts.first.updated_at

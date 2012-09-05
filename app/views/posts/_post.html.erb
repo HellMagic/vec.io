@@ -1,4 +1,4 @@
-<%= cache "posts/#{post.slug}/#{post.updated_at}" do %>
+<%= cache post do %>
   <div class="post block">
     <h1 class="post-header block-header">
       <%= link_to post.title, post %>

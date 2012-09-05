@@ -49,8 +49,8 @@ set :assets_dependencies, %w[
 # Application Specific Tasks
 #   that should be performed at the end of each deployment
 def application_specific_tasks
-  # system 'cap deploy:delayed_job:start n=1'
-  # system 'cap deploy:run_command command="ls -la"'
+  system 'cap deploy:sitemap:refresh'
+  system 'cap deploy:whenever:update'
 end
 
 # Check if remote file exists
@@ -71,12 +71,26 @@ namespace :deploy do
     desc "Populates the Production Database"
     task :seed, :roles => :db do
       puts "\n\n=== Populating the Production Database! ===\n\n"
-      run "cd #{current_path}; rake db:seed RAILS_ENV=production"
+      run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=production"
     end
 
     desc "Remove and create mongoid indexes"
     task :index, :roles => :db do
-      run "cd #{deploy_to}/current/; RAILS_ENV=production bundle exec rake db:mongoid:remove_indexes; RAILS_ENV=production bundle exec rake db:mongoid:create_indexes"
+      run "cd #{current_path}; RAILS_ENV=production bundle exec rake db:mongoid:remove_indexes; RAILS_ENV=production bundle exec rake db:mongoid:create_indexes"
+    end
+  end
+
+  namespace :sitemap do
+    desc "Refresh the sitemap and resubmit"
+    task :refresh, :roles => :app do
+      run "cd #{current_path}; RAILS_ENV=production bundle exec rake sitemap:refresh"
+    end
+  end
+
+  namespace :whenever do
+    desc "Update the whenever crontab"
+    task :update, :roles => :app do
+      run "cd #{current_path}; RAILS_ENV=production bundle exec whenever --update-crontab"
     end
   end
 
@@ -129,6 +143,5 @@ namespace :deploy do
 
 end
 
-before 'deploy:setup', 'rvm:install_rvm'
-before 'deploy:setup', 'rvm:install_ruby'
+before 'deploy:setup', 'rvm:install_rvm', 'rvm:install_ruby'
 after 'deploy:setup', 'deploy:setup_shared_path'
