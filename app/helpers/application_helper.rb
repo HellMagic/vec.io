@@ -25,6 +25,7 @@ module ApplicationHelper
 
   def html_title
     title = @post && @post.title || @tag && @tag.title
+    title = controller.controller_name.humanize if title.blank? && %w[posts tags].include?(controller.controller_name)
     title.blank? ? Preference.html.title : title + ' | ' + Preference.html.title
   end
 
@@ -35,7 +36,7 @@ module ApplicationHelper
 
   def html_description
     desc = @post && @post.content
-    desc.blank? ? Preference.html.description : plain(desc)[0..160]
+    desc.blank? ? Preference.html.description : plain(desc)[0..512]
   end
 
 end

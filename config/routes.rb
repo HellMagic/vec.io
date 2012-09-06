@@ -12,7 +12,7 @@ VecIo::Application.routes.draw do
   end
 
   resources :assets, :path => '/files/'
-  resources :tags, :only => [:index, :show]
+  resources :tags, :only => [:index, :show, :edit, :update, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
