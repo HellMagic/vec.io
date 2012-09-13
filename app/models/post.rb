@@ -44,6 +44,10 @@ class Post
     p.tags.each { |t| t.set(:count, t.posts.published.count) }
   end
 
+  after_update do |p|
+    p.set(:created_at, p.updated_at) if p.changes['published'] && p.changes['published'][1]
+  end
+
   after_destroy do |p|
     p.tags.each { |t| t.set(:count, t.posts.published.count) }
   end
