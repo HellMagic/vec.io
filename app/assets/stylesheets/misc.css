@@ -231,3 +231,9 @@ pre {
   padding: 6px 0 8px;
   border: 0 none;
 }
+
+@media (max-width: 480px) {
+  .CodeRay pre {
+    padding: 6px 8px 8px;
+  }
+}
