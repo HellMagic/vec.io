@@ -8,6 +8,12 @@ module Redcarpet
         super(extensions.merge(xhtml: true, hard_wrap: true, with_toc_data: true))
       end
 
+      def header(title, level)
+        %Q{
+        <h#{level} class="toc-header">#{title} <a class="toc-anchor" href="##{title.to_url}" name="#{title.to_url}"><i class="icon-link"></i></a></h#{level}>
+        }
+      end
+
       def block_code(code, language)
         language = 'c' if language.blank?
         CodeRay.scan(code, language).div(css: :class)
