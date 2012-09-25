@@ -10,7 +10,7 @@ module Redcarpet
 
       def header(title, level)
         %Q{
-        <h#{level} class="toc-header">#{title} <a class="toc-anchor" href="##{title.to_url}" name="#{title.to_url}"><i class="icon-link"></i></a></h#{level}>
+        <h#{level} class="toc-header">#{title} <a class="toc-anchor" href="#toc-#{title.to_url}" id="toc-#{title.to_url}"><i class="icon-link"></i></a></h#{level}>
         }
       end
 
