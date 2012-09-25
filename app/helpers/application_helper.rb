@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def timeago(time, options = {})
-    timeago_tag(time.utc, options.reverse_merge(:limit => 7.days.ago))
+    timeago_tag(time.utc, options.reverse_merge(:class => 'timeago', :limit => 7.days.ago))
   end
 
   def render_html_head
