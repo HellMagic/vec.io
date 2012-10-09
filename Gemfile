@@ -30,7 +30,7 @@ gem 'capistrano'
 gem 'rvm-capistrano'
 
 gem 'mongoid'
-gem 'mongoid_slug', :git => 'https://github.com/al/mongoid-slug.git', :branch => 'bugfix-find'
+gem 'mongoid_slug'
 gem 'mongoid-history'
 
 gem 'image_optim' # Need to install these binaries: advpng, gifsicle, jpegoptim, jpegtran, optipng, pngcrush, pngout

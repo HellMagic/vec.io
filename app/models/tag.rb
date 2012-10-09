@@ -11,7 +11,7 @@ class Tag
   index({ title: 1 }, { unique: true })
   index(count: 1)
 
-  slug :title
+  slug :title, permanent: true
 
   validates_presence_of :title, allow_blank: false
   validates_uniqueness_of :title, case_sensitive: false, allow_blank: true

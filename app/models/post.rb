@@ -4,20 +4,18 @@ class Post
   include Mongoid::Slug
   include Mongoid::History::Trackable
 
-  attr_accessible :published, :slug, :title, :content, :tags, :tags_str
+  attr_accessible :published, :title, :content, :tags, :tags_str
 
   field :published, type: Boolean
-  field :slug, type: String
   field :title, type: String
   field :content, type: String
 
-  index({ slug: 1 }, { unique: true })
   index({ title: 1 }, { unique: true })
 
-  slug :slug
+  slug :title, permanent: true, history: true
 
-  validates_presence_of :slug, :title, :content, allow_blank: false
-  validates_uniqueness_of :slug, :title, case_sensitive: false, allow_blank: true
+  validates_presence_of :title, :content, allow_blank: false
+  validates_uniqueness_of :title, case_sensitive: false, allow_blank: true
 
   belongs_to :user, index: true
   has_many :assets, as: :attachable, autosave: true, dependent: :destroy
@@ -25,7 +23,7 @@ class Post
 
   paginates_per 16
 
-  track_history :on => [:published, :slug, :title, :content]
+  track_history :on => [:published, :title, :content]
 
   scope :published, where(published: true)
 
