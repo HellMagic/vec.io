@@ -24,19 +24,18 @@ module ApplicationHelper
   end
 
   def html_title
-    title = @post && @post.title || @tag && @tag.title
-    title = controller.controller_name.humanize if title.blank? && %w[posts tags].include?(controller.controller_name)
-    title.blank? ? Preference.html.title : title + ' | ' + Preference.html.title
+    title = @post && @post.title || @tag && @tag.title || %w[posts tags].include?(controller.controller_name) && controller.controller_name.humanize
+    title && (title + ' | ' + Preference.html.title) || Preference.html.title
   end
 
   def html_keywords
     tags = @post && @post.tags.map(&:title).join(',')
-    tags.blank? ? Preference.html.keywords : tags
+    tags || Preference.html.keywords
   end
 
   def html_description
     desc = @post && @post.content
-    desc.blank? ? Preference.html.description : plain(desc)[0..512]
+    desc && plain(desc)[0..512] || Preference.html.description
   end
 
 end
