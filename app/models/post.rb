@@ -23,7 +23,7 @@ class Post
 
   paginates_per 16
 
-  track_history :on => [:published, :title, :content]
+  track_history :on => [:published, :title, :content, :updated_at]
 
   scope :published, where(published: true)
 

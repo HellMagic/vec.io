@@ -32,6 +32,15 @@
   padding-left: 16px;
 }
 
+.posts-tags ul li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  margin-bottom: 8px;
+}
+
 .posts-tags ul li:before {
   content: "\f02b";
   font-family: FontAwesome;
@@ -43,15 +52,6 @@
   font-size: 70%;
   padding-right: 8px;
   vertical-align: middle;
-}
-
-.posts-tags ul li {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  width: 50%;
-  margin-bottom: 8px;
 }
 
 .post-header a {
