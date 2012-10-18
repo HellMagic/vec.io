@@ -1,3 +1,13 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  height: auto !important;
+  min-height: 100%;
+  position: relative;
+}
+
 header {
   background: #2D2D2D;
   border-bottom: 1px solid #000000;
@@ -43,12 +53,27 @@ header .current a {
   text-decoration: none;
 }
 
-.container-full {
-  padding: 0 16px;
+.main {
+  padding: 64px 16px;
 }
 
-.main {
-  margin-top: 64px;
+footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 64px 16px 16px;
+}
+
+footer, footer a {
+  color: #CCCCCC;
+}
+
+.footer-info {
+  border-top: 6px double #F2F2F2;
+  padding-top: 4px;
 }
 
 .block {
@@ -149,8 +174,12 @@ header .current a {
     margin: 0 -20px;
   }
 
-  .container-full {
-    margin: 64px -20px;
+  footer {
+    margin: 0 -20px;
+  }
+
+  .main {
+    margin: 0 -20px;
   }
 
   .block-header {
@@ -171,20 +200,14 @@ header .current a {
     margin-top: 0;
   }
 
-  .main {
-    margin-top: 32px;
-  }
-
-  .container-full {
-    margin: 64px -20px;
-  }
-
   .block {
     box-shadow: none;
+    margin-top: -16px;
   }
 
   .block-header {
-    padding: 8px 0;
+    padding: 0 0 8px;
+    margin-top: 0;
   }
 
   .block-content {

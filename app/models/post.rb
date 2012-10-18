@@ -10,6 +10,7 @@ class Post
   field :title, type: String
   field :content, type: String
 
+  index(created_at: 1)
   index({ title: 1 }, { unique: true })
 
   slug :title, permanent: true, history: true
@@ -48,5 +49,6 @@ class Post
 
   after_destroy do |p|
     p.tags.each { |t| t.set(:count, t.posts.published.count) }
+    p.history_tracks.destroy_all
   end
 end

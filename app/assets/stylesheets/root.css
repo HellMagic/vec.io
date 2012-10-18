@@ -35,6 +35,11 @@
   margin-bottom: 4px;
 }
 
+.info-block-footer-hacking {
+  visibility: hidden;
+  padding-top: 16px;
+}
+
 @media (max-width: 767px) {
   .info-block {
     width: 100%;

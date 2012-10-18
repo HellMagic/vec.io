@@ -16,10 +16,11 @@
     <header>
       <%= render 'shared/nav' %>
     </header>
-    <div class="main container-full">
+    <div class="main clearfix">
       <%= render 'shared/flashes' %>
       <%= yield %>
-      <%= render 'shared/ga' %>
     </div>
+    <%= render 'shared/footer' %>
+    <%= render 'shared/ga' %>
   <% end %>
 </html>

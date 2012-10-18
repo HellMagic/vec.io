@@ -1,0 +1,5 @@
+<footer>
+  <div class="footer-info">
+    <p><%= link_to raw("<i class='icon-envelope'></i> #{User.first.email}"), "mailto:#{User.first.email}?subject=#{@post.title rescue nil}" %> {<%= "Ruby 1.9.3 on Rails #{Rails.version}" %>, Mongoid, Unicorn, Nginx, Markdown}</p>
+  </div>
+</footer>
