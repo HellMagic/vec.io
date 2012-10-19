@@ -56,7 +56,8 @@
   line-height: 1.5em;
   color: #555555;
   background-color: #FFFFFF;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #E3E2E1;
+  box-shadow: 0 1px 1px rgba(65, 55, 45, 0.1) inset;
 }
 
 .CodeMirror-scroll {
@@ -79,9 +80,11 @@ i, .icon-large:before {
 /*
  * For tag it
  */
-.tagit {
+ul.tagit {
   margin-bottom: 9px;
   border-radius: 0;
+  border: 1px solid #E3E2E1;
+  box-shadow: 0 1px 1px rgba(65, 55, 45, 0.1) inset;
 }
 
 .tagit-new input[type="text"].ui-autocomplete-input {
@@ -156,7 +159,8 @@ input[type="color"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  box-shadow: none;
+  box-shadow: 0 1px 1px rgba(65, 55, 45, 0.1) inset;
+  border: 1px solid #E3E2E1;
   font-family: inherit;
   border-radius: 0;
   height: 28px;
@@ -178,8 +182,8 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus {
-  box-shadow: none;
-  border-color: #CCCCCC;
+  box-shadow: 0 1px 1px rgba(65, 55, 45, 0.1) inset;
+  border-color: #DDDDDD;
 }
 
 pre, code, input, textarea, select {
