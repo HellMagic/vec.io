@@ -3,7 +3,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  font-size: 128px;
+  font-size: 256px;
   font-weight: bold;
   color: #F4F4F4;
   line-height: 1.2em;
@@ -16,32 +16,36 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Droid Sans Mono', monospace;
-  font-size: 12px;
-  line-height: 1.5em;
+  font-family: 'Droid Sans Mono', 'Ubuntu Mono', monospace;
+  width: 100%;
   padding: 0 16px;
-  width: 50%;
-  float: left;
-  border-left: 8px solid #EEEEEE;
+  overflow: hidden;
+  color: #888888;
+  text-align: center;
 }
 
-.info-block h1 {
+.info-block .user-name {
   font-size: 14px;
   line-height: 1.5em;
-  margin-top: 0;
 }
 
-.info-block dd {
-  margin-bottom: 4px;
+.info-block .user-motivation {
+  font-size: 64px;
+  line-height: 66px;
+  margin: 16px 0;
 }
 
-.info-block-footer-hacking {
-  visibility: hidden;
-  padding-top: 16px;
-}
+@media (max-width: 480px) {
+  .fixed-typography {
+    font-size: 128px;
+  }
 
-@media (max-width: 767px) {
-  .info-block {
-    width: 100%;
+  .info-block .user-avatar {
+    width: 128px;
+  }
+
+  .info-block .user-motivation {
+    font-size: 48px;
+    line-height: 50px;
   }
 }

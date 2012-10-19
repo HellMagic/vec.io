@@ -12,8 +12,8 @@ en:
 
   html:
     title: VEC.IO
-    keywords: vector,matrix,graphics,OpenGL,cv,computer vision,FFmpeg,Android,Ruby,Rails,VPlayer
-    description: Focus on high performance technology, do it
+    keywords: Vector,Matrix,Graphics,OpenGL,CV,Computer Vision,FFmpeg,Android,Ruby,Rails,Haskell,Java,C
+    description: Strive to formulate elegant code, simple design and friendly machine.
 
   email:
     default: root@vec.io
