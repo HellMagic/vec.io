@@ -1,8 +1,8 @@
 <section class="fixed-typography"><%= @user.name %></section>
 
-<section class="info-block">
-  <figure>
-    <%= image_tag("https://secure.gravatar.com/avatar/#{Digest::MD5.hexdigest(@user.email)}?r=g&s=256", :alt => @user.name, :title => @user.name, :class => "user-avatar") %>
+<section class="user-profile">
+  <figure class="user-avatar">
+    <%= image_tag("https://secure.gravatar.com/avatar/#{Digest::MD5.hexdigest(@user.email)}?r=g&s=256", :alt => @user.name, :title => @user.name) %>
     <figcaption class="user-name"><%= @user.name %></figcaption>
   </figure>
   <h2 class="user-motivation"><%= Preference.html.description %></h2>

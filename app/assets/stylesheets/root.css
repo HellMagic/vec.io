@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.info-block {
+.user-profile {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -24,28 +24,46 @@
   text-align: center;
 }
 
-.info-block .user-name {
+.user-profile .user-avatar {
+  margin: 16px 0;
+}
+
+.user-profile .user-avatar img {
+  width: 256px;
+  height: 256px;
+}
+
+.user-profile .user-name {
   font-size: 14px;
   line-height: 1.5em;
 }
 
-.info-block .user-motivation {
+.user-profile .user-motivation {
   font-size: 64px;
   line-height: 66px;
   margin: 16px 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .fixed-typography {
     font-size: 128px;
   }
+}
 
-  .info-block .user-avatar {
+@media (max-width: 480px) {
+  .user-profile .user-avatar img {
     width: 128px;
+    height: 128px;
   }
 
-  .info-block .user-motivation {
+  .user-profile .user-motivation {
     font-size: 48px;
     line-height: 50px;
+  }
+}
+
+@media (max-height: 480px) {
+  .user-profile .user-avatar {
+    margin: 0;
   }
 }
