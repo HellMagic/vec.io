@@ -70,6 +70,32 @@ jQuery(function ($) { $(document).ready(function(){
       editor.setValue('');
       editor.getTextArea().value = '';
     });
+
+    var form = $(this).parents('form');
+
+    var formLocal = JSON.stringify(form.serializeArray());
+    var saveLocal = function (store) {
+      editor.getTextArea().value = editor.getValue();
+      var formCurrent = JSON.stringify(form.serializeArray());
+      if (formCurrent != formLocal) {
+        localStorage.setItem(form.attr('id'), formCurrent);
+        formLocal = formCurrent;
+      }
+    };
+    setInterval(saveLocal, 8000);
+
+    var formRemote = JSON.stringify(form.serializeArray());
+    var saveRemote = function (store) {
+      editor.getTextArea().value = editor.getValue();
+      var formCurrent = JSON.stringify(form.serializeArray());
+      if (formCurrent != formRemote) {
+        $.rails.handleRemote(form);
+        formRemote = formCurrent;
+      }
+    };
+    if (form.data('persisted')) {
+      setInterval(saveRemote, 480000);
+    }
   });
 
   $('.tagit').tagit({
