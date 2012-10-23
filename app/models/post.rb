@@ -34,8 +34,8 @@ class Post
 
   def tags_str=(str)
     str.split(',').uniq.each { |t|
-      tag = Tag.find_or_initialize_by(title: t)
-      self.tags << tag unless self.tags.include? tag
+      tag = Tag.where(title: /^#{t}$/i).first || Tag.new(title: t)
+      self.tags << tag
     }
   end
 
