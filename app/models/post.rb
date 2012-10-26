@@ -33,9 +33,9 @@ class Post
   end
 
   def tags_str=(str)
-    str.split(',').uniq.each { |t|
+    self.tags = str.split(',').uniq.inject([]) { |ts, t|
       tag = Tag.where(title: /^#{t}$/i).first || Tag.new(title: t)
-      self.tags << tag
+      ts << tag
     }
   end
 
