@@ -68,6 +68,10 @@
   width: 100%
 }
 
+span.cm-header {
+  font-weight: normal;
+}
+
 
 /*
  * For font awesome
