@@ -91,12 +91,22 @@ footer, footer a {
   padding: 16px 32px;
 }
 
+.content {
+  padding-top: 8px;
+  line-height: 24px;
+}
+
 .content h1,
 .content h2 {
   font-size: 200%;
-  margin-top: 32px;
+  margin-top: 8px;
   padding-bottom: 2px;
   border-bottom: 1px solid #E7E7E7;
+}
+
+.content * + h1,
+.content * + h2 {
+  margin: 32px 0 16px;
 }
 
 .content h3,
@@ -104,30 +114,40 @@ footer, footer a {
 .content h5,
 .content h6 {
   font-size: 140%;
-  margin-top: 16px;
+  margin: 24px 0 12px;
   line-height: 32px;
+}
+
+.content p,
+.content pre {
+  margin-bottom: 16px;
 }
 
 .content ul,
 .content ol {
-  margin: 0 0 10px 10px;
+  margin: 0 0 16px 8px;
 }
 
 .content ul li:before {
   content: "\f061";
   font-family: FontAwesome;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
   display: inline-block;
   text-decoration: inherit;
   font-size: 70%;
-  padding-right: 5px;
+  padding-right: 8px;
   vertical-align:middle;
 }
 
 .content ol li {
   margin-left: 19px;
   list-style: decimal;
+}
+
+.content li {
+  line-height: 22px;
+  margin-bottom: 4px;
 }
 
 .field_with_errors input,

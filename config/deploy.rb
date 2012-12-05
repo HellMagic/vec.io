@@ -36,16 +36,6 @@ set :symlinks, [
   %w[uploads public/uploads]
 ]
 
-# Setup assets files
-#   that will cause the assets recompile if changed
-set :assets_dependencies, %w[
-  app/assets
-  lib/assets
-  vendor/assets
-  Gemfile.lock
-  config/routes.rb
-]
-
 # Application Specific Tasks
 #   that should be performed at the end of each deployment
 def application_specific_tasks
