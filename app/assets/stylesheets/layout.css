@@ -123,6 +123,11 @@ footer, footer a {
   margin-bottom: 16px;
 }
 
+.content pre,
+.content pre span {
+  line-height: 16px;
+}
+
 .content ul,
 .content ol {
   margin: 0 0 16px 8px;
@@ -148,6 +153,11 @@ footer, footer a {
 .content li {
   line-height: 22px;
   margin-bottom: 4px;
+}
+
+.content code {
+  background: #DDFFCC;
+  border: 1px solid #FFFFFF;
 }
 
 .field_with_errors input,
