@@ -14,6 +14,7 @@
         <li class="pull-right"><%= link_to raw('<i class="icon-eye-open"></i>'), @post %></li>
       <% elsif controller.controller_name == 'posts' && %w[show].include?(controller.action_name) %>
         <li class="pull-right"><%= link_to raw('<i class="icon-edit"></i>'), edit_post_path(@post) %></li>
+        <li class="pull-right"><%= link_to raw('<i class="icon-trash"></i>'), @post, :method => :DELETE, :confirm => t('views.action.confirm') %></li>
       <% else %>
         <li class="pull-right"><%= link_to raw('<i class="icon-plus"></i>'), new_post_path %></li>
       <% end %>
