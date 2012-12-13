@@ -10,7 +10,7 @@ set :application, "vec.io"
 
 set :scm, :git
 set :git_enable_submodules, 1
-set :repository, "webapp@#{application}:repos/#{application}"
+set :repository, "https://github.com/vecio/vec.io.git"
 set :branch, "master"
 
 set :user, 'webapp'

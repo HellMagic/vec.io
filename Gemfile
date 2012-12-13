@@ -33,7 +33,7 @@ gem 'mongoid'
 gem 'mongoid_slug'
 gem 'mongoid-history'
 
-gem 'image_optim' # Need to install these binaries: advpng, gifsicle, jpegoptim, jpegtran, optipng, pngcrush, pngout
+gem 'image_optim' # Need to install these binaries: advpng, gifsicle, jpegoptim, jpegtran, optipng, pngcrush
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid', :git => 'https://github.com/jnicklas/carrierwave-mongoid.git', :branch => 'mongoid-3.0'
