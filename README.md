@@ -38,7 +38,7 @@ How to deploy
 LICENSE
 -------
 
-Copyright (c) 2012, Cedric Fung <root@vec.io>
+Copyright (c) 2012, Cedric Fung <cedric@vec.io>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
