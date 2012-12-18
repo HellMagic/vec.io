@@ -29,10 +29,12 @@ How to deploy
 
 1. `$ git clone https://github.com/vecio/vec.io.git`
 2. `$ bundle`
-3. `$ rails s`
-4. Test, test, test and make some modifications
-5. `$ cap deploy:setup`
-6. `$ cap deploy`
+3. Modify **db/seeds.rb**, **config/settings.yml**, **config/deploy.rb** and anything else you wanna.
+4. `$ rake db:seed`
+5. `$ rails s`
+6. Test, test, test and make more modifications.
+7. `$ cap deploy:setup`
+8. `$ cap deploy`
 
 
 LICENSE
