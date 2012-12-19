@@ -77,8 +77,8 @@ class AssetsController < ApplicationController
       "id" => asset.id,
       "name" => asset.file_name,
       "size" => asset.file_size,
-      "url" => asset_path(asset),
-      "thumbnail_url" => asset_path(asset, :version => :thumb),
+      "url" => asset_url(asset),
+      "thumbnail_url" => asset_url(asset, :version => :thumb),
       "delete_type" => "DELETE"
     }
   end
