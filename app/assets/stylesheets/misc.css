@@ -50,7 +50,7 @@
  * For CodeMirror editor
  */
 .CodeMirror {
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: "Droid Sans Mono", "Ubuntu Mono", "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   font-size: 12px;
   margin-bottom: 9px;
   line-height: 1.5em;
@@ -101,17 +101,16 @@ ul.tagit {
  * For bootstrap
  */
 body {
-  font-family: 'Quantico', sans-serif;
+  font-family: "Quantico", "Ubuntu", "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", "DejaVu Sans", "Verdana", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", "Ubuntu", "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", "DejaVu Sans", "Verdana", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
   font-weight: normal;
 }
 
 em {
-  font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 
 blockquote {
@@ -203,7 +202,7 @@ input[type='checkbox'] + label {
 }
 
 code, pre {
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: "Droid Sans Mono", "Ubuntu Mono", "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 }
 
 code {

@@ -9,7 +9,7 @@
 .posts-archive time {
   display: block;
   float: left;
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", "Ubuntu", "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", "DejaVu Sans", "Verdana", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
   font-size: 27px;
   color: #CCCCCC;
   font-weight: bold;
@@ -64,7 +64,7 @@
 }
 
 .post-header time {
-  font-family: 'Quantico', sans-serif;
+  font-family: "Quantico", "Ubuntu", "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", "DejaVu Sans", "Verdana", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
   color: #CCCCCC;
   font-size: 12px;
   line-height: 1em;
@@ -83,7 +83,7 @@
 .post-tags li a {
   color: #CCCCCC;
   font-size: 12px;
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: "Droid Sans Mono", "Ubuntu Mono", "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 }
 
 .post-tags li a:hover {

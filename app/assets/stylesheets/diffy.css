@@ -10,7 +10,7 @@
   padding: 0;
   display: table;
   width: 100%;
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: "Droid Sans Mono", "Ubuntu Mono", "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   font-size: 12px;
 }
 
@@ -72,7 +72,7 @@
 
 .diff-header i {
   float: right;
-  font-family: 'Quantico', sans-serif;
+  font-family: "Quantico", "Ubuntu", "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", "DejaVu Sans", "Verdana", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
   font-size: 64%;
   color: #BBBBBB;
 }
