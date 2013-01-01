@@ -20,9 +20,18 @@
 //= require bootstrap/js/bootstrap
 //= require highlight/highlight.min
 //= require codemirror/lib/codemirror
+//= require codemirror/lib/util/overlay
 //= require codemirror/mode/xml/xml
 //= require codemirror/mode/markdown/markdown
 //= require codemirror/mode/gfm/gfm
+//= require codemirror/mode/javascript/javascript
+//= require codemirror/mode/css/css
+//= require codemirror/mode/htmlmixed/htmlmixed
+//= require codemirror/mode/clike/clike
+//= require codemirror/mode/ruby/ruby
+//= require codemirror/mode/haskell/haskell
+//= require codemirror/mode/shell/shell
+//= require codemirror/mode/yaml/yaml
 //= require showdown/src/showdown
 //= require tag-it/js/tag-it
 //= require_tree .
@@ -39,13 +48,14 @@ jQuery(function ($) { $(document).ready(function(){
       matchBrackets: true,
       theme: "default",
       lineWrapping: true,
-      onChange: function(cm, args) {
-        if (preview.length !== 0) {
-          preview.html(showdown.makeHtml(cm.getValue()));
-          hljs.tabReplace = '<span class="indent">\t</span>';
-          $('pre code', preview).each(function(i, e) {hljs.highlightBlock(e, hljs.tabReplace, false)});
-        }
-      },
+    });
+
+    editor.on('change', function(cm, args) {
+      if (preview.length !== 0) {
+        preview.html(showdown.makeHtml(cm.getValue()));
+        hljs.tabReplace = '<span class="indent">\t</span>';
+        $('pre code', preview).each(function(i, e) {hljs.highlightBlock(e, hljs.tabReplace, false)});
+      }
     });
 
     $('.editor-attach').live('click', function(e) {

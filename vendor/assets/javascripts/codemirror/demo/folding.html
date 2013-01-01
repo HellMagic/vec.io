@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>CodeMirror: Code Folding Demo</title>
     <link rel="stylesheet" href="../lib/codemirror.css">
     <script src="../lib/codemirror.js"></script>
@@ -11,7 +12,13 @@
 
     <style type="text/css">
       .CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
-      .CodeMirror-gutter {min-width: 2.6em; cursor: pointer;}
+      .CodeMirror-foldmarker {
+        color: blue;
+        text-shadow: #b9f 1px 1px 2px, #b9f -1px -1px 2px, #b9f 1px -1px 2px, #b9f -1px 1px 2px;
+        font-family: arial;
+        line-height: .3;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -39,22 +46,21 @@ window.onload = function() {
     mode: "javascript",
     lineNumbers: true,
     lineWrapping: true,
-    onGutterClick: foldFunc,
     extraKeys: {"Ctrl-Q": function(cm){foldFunc(cm, cm.getCursor().line);}}
   });
+  editor.on("gutterClick", foldFunc);
   foldFunc(editor, 9);
-  foldFunc(editor, 20);
 
   var foldFunc_html = CodeMirror.newFoldFunction(CodeMirror.tagRangeFinder);
   window.editor_html = CodeMirror.fromTextArea(te_html, {
     mode: "text/html",
     lineNumbers: true,
     lineWrapping: true,
-    onGutterClick: foldFunc_html,
     extraKeys: {"Ctrl-Q": function(cm){foldFunc_html(cm, cm.getCursor().line);}}
-  })
+  });
+  editor_html.on("gutterClick", foldFunc_html);
+  foldFunc_html(editor_html, 11);
   foldFunc_html(editor_html, 1);
-  foldFunc_html(editor_html, 15);
 };
 </script>
   </body>

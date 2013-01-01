@@ -15,8 +15,10 @@ module Redcarpet
       end
 
       def block_code(code, language)
-        language = 'c' if language.blank?
+        language = 'cpp' if language == 'c++'
         CodeRay.scan(code, language).div(css: :class)
+      rescue
+        %Q{<div class="CodeRay"><div class="code"><pre>#{code}</pre></div></div>}
       end
     end
 

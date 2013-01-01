@@ -57,11 +57,11 @@
   color: #555555;
   background-color: #FFFFFF;
   border: 1px solid #E3E2E1;
+  height: auto;
   box-shadow: 0 1px 1px rgba(65, 55, 45, 0.1) inset;
 }
 
 .CodeMirror-scroll {
-  height: auto;
   min-height: 256px;
   overflow-y: hidden;
   overflow-x: auto;
