@@ -3,6 +3,7 @@ require 'bundler/capistrano'
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
+set :ssh_port, 22
 
 set :rvm_ruby_string, "ruby-1.9.3@vec.io"
 
@@ -67,6 +68,17 @@ namespace :deploy do
     desc "Remove and create mongoid indexes"
     task :index, :roles => :db do
       run "cd #{current_path}; RAILS_ENV=production bundle exec rake db:mongoid:remove_indexes; RAILS_ENV=production bundle exec rake db:mongoid:create_indexes"
+    end
+  end
+
+  namespace :assets do
+    task :precompile, :roles => :web, :except => { :no_release => true } do
+      run_locally("rm -rf public/assets/*")
+      run_locally("bundle exec rake assets:precompile")
+      servers = find_servers_for_task(current_task)
+      servers.each do |server|
+        run_locally("rsync --recursive --times --rsh=ssh --compress --human-readable --progress -e 'ssh -p #{ssh_port}' public/assets #{user}@#{server}:#{shared_path}")
+      end
     end
   end
 
