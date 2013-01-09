@@ -44,10 +44,12 @@ jQuery(function ($) { $(document).ready(function(){
     var preview = $($(area).data('preview'));
     var editor = CodeMirror.fromTextArea(area, {
       mode: 'gfm',
+      theme: 'default',
+      tabSize: 2,
+      autoFocus: false,
       lineNumbers: false,
-      matchBrackets: true,
-      theme: "default",
       lineWrapping: true,
+      matchBrackets: true,
     });
 
     editor.on('change', function(cm, args) {
