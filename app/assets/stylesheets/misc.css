@@ -76,8 +76,8 @@ span.cm-header {
 /*
  * For font awesome
  */
-i, .icon-large:before {
-  vertical-align: middle;
+[class^="icon-"], [class*=" icon-"] {
+  line-height: inherit;
 }
 
 
