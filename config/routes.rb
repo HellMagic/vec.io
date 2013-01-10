@@ -5,7 +5,7 @@ VecIo::Application.routes.draw do
   devise_for :users, :path => "/account", :path_names => { :sign_in => 'signin', :sign_out => 'signout', :password => 'password', :registration => '', :sign_up => 'signup' }
 
   resources :posts do
-    resources :histories, :only => [:index, :show, :destroy]
+    resources :histories, :only => [:index, :show, :destroy, :update]
     collection do
       get 'drafts'
     end

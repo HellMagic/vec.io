@@ -17,6 +17,15 @@ class HistoriesController < ApplicationController
     end
   end
 
+  def update
+    @post.undo! current_user, from: @history.version, to: @post.history_tracks.last.version
+
+    respond_to do |format|
+      format.html { redirect_to @post, notice: t('flash.histories.success.update') }
+      format.json { render json: @post }
+    end
+  end
+
   def destroy
     @history.destroy
 

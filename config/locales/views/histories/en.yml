@@ -1,7 +1,9 @@
 en:
+  views:
+    histories:
+      revert: "Revert the modifications since this version."
   flash:
     histories:
       success:
-        create: "Successfully create a new history."
-        update: "Successfully update the history."
+        update: "Successfully revert the history."
         destroy: "Successfully delete the history."

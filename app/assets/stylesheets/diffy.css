@@ -72,14 +72,11 @@
 
 .diff-header i {
   float: right;
-  font-family: "Quantico", "Ubuntu", "Lucida Grande", "Lucida Sans Unicode", "Helvetica Neue", "DejaVu Sans", "Verdana", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
   font-size: 64%;
   color: #BBBBBB;
+  margin-left: 16px;
 }
 
 .diff-header i:hover {
   color: #888888;
-}
-
-.diff-content {
 }

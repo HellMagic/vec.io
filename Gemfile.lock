@@ -9,6 +9,15 @@ GIT
       mongoid-grid_fs (~> 1.3.1)
 
 GIT
+  remote: https://github.com/vecio/mongoid-history.git
+  revision: 586dbcc7d370943668a57b1bcbc9c63528e031f0
+  branch: index
+  specs:
+    mongoid-history (0.3.1)
+      easy_diff
+      mongoid (~> 3.0.4)
+
+GIT
   remote: https://github.com/vecio/rails-timeago.git
   revision: 298989277e1920c0b2cec48c825edeee8a5e9ee3
   specs:
@@ -51,7 +60,7 @@ GEM
     builder (3.0.4)
     cache_digests (0.2.0)
       actionpack (>= 3.2)
-    capistrano (2.13.5)
+    capistrano (2.14.1)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -108,9 +117,6 @@ GEM
     mongoid-grid_fs (1.3.3)
       mime-types (~> 1.19)
       mongoid (~> 3.0)
-    mongoid-history (0.3.1)
-      easy_diff
-      mongoid (~> 3.0.4)
     mongoid_slug (2.0.1)
       mongoid (~> 3.0)
       stringex (~> 1.4)
@@ -210,7 +216,7 @@ DEPENDENCIES
   kaminari
   mini_magick
   mongoid
-  mongoid-history
+  mongoid-history!
   mongoid_slug
   nokogiri
   rails (= 3.2.11)
