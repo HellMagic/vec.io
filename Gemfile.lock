@@ -10,10 +10,11 @@ GIT
 
 GIT
   remote: https://github.com/vecio/mongoid-history.git
-  revision: 586dbcc7d370943668a57b1bcbc9c63528e031f0
+  revision: 9725bb3c6f9b04b51cb2764158e5cd032397d579
   branch: index
   specs:
     mongoid-history (0.3.1)
+      activesupport
       easy_diff
       mongoid (~> 3.0.4)
 
@@ -72,7 +73,7 @@ GEM
     chronic (0.9.0)
     coderay (1.0.8)
     dalli (2.6.0)
-    devise (2.2.0)
+    devise (2.2.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
@@ -109,9 +110,9 @@ GEM
     mime-types (1.19)
     mini_magick (3.4)
       subexec (~> 0.2.1)
-    mongoid (3.0.16)
+    mongoid (3.0.17)
       activemodel (~> 3.1)
-      moped (~> 1.1)
+      moped (~> 1.2)
       origin (~> 1.0)
       tzinfo (~> 0.3.22)
     mongoid-grid_fs (1.3.3)
@@ -126,7 +127,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.6.2)
+    net-ssh (2.6.3)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.5.6)
@@ -195,7 +196,7 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.1)
       rack (>= 1.0)
-    whenever (0.8.1)
+    whenever (0.8.2)
       activesupport (>= 2.3.4)
       chronic (>= 0.6.3)
 
