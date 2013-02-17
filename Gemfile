@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 group :assets do
   gem 'sass-rails'
   gem 'uglifier'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.1.4'
 gem 'rails-timeago', :git => 'https://github.com/vecio/rails-timeago.git'
 gem 'rails_config_i18n'
 gem 'kaminari'

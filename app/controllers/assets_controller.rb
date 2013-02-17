@@ -40,7 +40,7 @@ class AssetsController < ApplicationController
 
   def create
     file = params[:asset].delete('file')
-    @asset = current_user.assets.new(params[:asset].merge file: file.first)
+    @asset = current_user.assets.new(params[:asset].merge file: file.last)
     begin
       @asset.attachable = params[:asset][:attachable_type].constantize.find(params[:asset][:attachable_id])
     rescue => e
