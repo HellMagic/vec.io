@@ -5,7 +5,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 set :ssh_port, 22
 
-set :rvm_ruby_string, "ruby-1.9.3@vec.io"
+set :rvm_ruby_string, "ruby-2.0.0@vec.io"
 
 set :application, "vec.io"
 
