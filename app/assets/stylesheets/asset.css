@@ -30,6 +30,32 @@
   padding: 8px 12px;
 }
 
+.assets-list li:before {
+  content: "\f0c6";
+  color: #777777;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  font-size: 80%;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.assets-list li {
+  line-height: 20px;
+}
+
+.assets-list li,
+.assets-list li a {
+  color: #AAAAAA;
+}
+
+.assets-list li a:hover {
+  color: #555555;
+}
+
 @media (max-width: 767px) {
   #fileupload .preview {
     padding-left: 16px;
