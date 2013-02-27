@@ -1,11 +1,13 @@
 require 'rvm/capistrano'
 require 'bundler/capistrano'
+require 'delayed/recipes'
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 set :ssh_port, 22
 
 set :rvm_ruby_string, "ruby-2.0.0@vec.io"
+set :rails_env, "production" #added for delayed job
 
 set :application, "vec.io"
 
@@ -147,3 +149,6 @@ end
 
 before 'deploy:setup', 'rvm:install_rvm', 'rvm:install_ruby'
 after 'deploy:setup', 'deploy:setup_shared_path'
+after 'deploy:start',   'delayed_job:start'
+after 'deploy:stop',    'delayed_job:stop'
+after 'deploy:restart', 'delayed_job:restart'

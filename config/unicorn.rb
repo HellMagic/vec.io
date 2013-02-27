@@ -6,7 +6,7 @@ webroot = "/home/webapp/apps/#{site_name}/"
 env = ENV["RAILS_ENV"] || "development"
 
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete documentation.
-worker_processes 1
+worker_processes 3
 
 # We use a shorter backlog for quicker failover when busy
 listen "/tmp/unicorn.#{site_name}.socket", :backlog => 64
