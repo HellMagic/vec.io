@@ -4,7 +4,6 @@ require 'delayed/recipes'
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-set :ssh_port, 22
 
 set :rvm_ruby_string, "ruby-2.0.0@vec.io"
 set :rails_env, "production" #added for delayed job
@@ -79,7 +78,7 @@ namespace :deploy do
       run_locally("bundle exec rake assets:precompile")
       servers = find_servers_for_task(current_task)
       servers.each do |server|
-        run_locally("rsync --recursive --times --rsh=ssh --compress --human-readable --progress -e 'ssh -p #{ssh_port}' public/assets #{user}@#{server}:#{shared_path}")
+        run_locally("rsync --recursive --times --rsh=ssh --compress --human-readable --progress public/assets #{user}@#{server}:#{shared_path}")
       end
     end
   end
