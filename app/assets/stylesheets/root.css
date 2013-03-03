@@ -1,17 +1,3 @@
-.fixed-typography {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-size: 256px;
-  font-weight: bold;
-  color: #F4F4F4;
-  line-height: 1.2em;
-  text-align: center;
-  z-index: -1;
-  overflow: hidden;
-}
-
 .user-profile {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -42,12 +28,6 @@
   font-size: 64px;
   line-height: 66px;
   margin: 16px 0;
-}
-
-@media (max-width: 767px) {
-  .fixed-typography {
-    font-size: 128px;
-  }
 }
 
 @media (max-width: 480px) {
