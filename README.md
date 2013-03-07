@@ -20,7 +20,8 @@ Features
 System requirements
 -------------------
 
-- Ruby 1.9.3
+- Ruby 1.9.3+
+- Pandoc 1.10+
 - `sudo apt-get install mongodb memcached imagemagick trimage gifsicle jpegoptim libjpeg-progs optipng pngcrush`
 
 

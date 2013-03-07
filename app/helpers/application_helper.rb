@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def markdown(text)
-    Redcarpet::Markdown.render(text).try(:html_safe)
+    PandocRuby.convert(text, 'smart', 'no-wrap', 'indented-code-classes=bash', from: 'markdown+autolink_bare_uris+hard_line_breaks-implicit_figures', to: 'html5').try(:html_safe)
   end
 
   def plain(text)

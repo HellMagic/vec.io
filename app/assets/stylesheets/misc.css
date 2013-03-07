@@ -206,11 +206,11 @@ input[type='checkbox'] + label {
 
 code, pre {
   font-family: "Droid Sans Mono", "Ubuntu Mono", "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  border: 0 none;
 }
 
 code {
   background: #F5F5F5;
-  border: 0 none;
   font-size: 11px;
   padding: 0 2px;
 }
@@ -232,20 +232,15 @@ pre {
 
 
 /*
- * For CodeRay
+ * For pandoc
  */
-.CodeRay {
-  padding: 0 32px;
-  margin: 0 -32px;
-}
-
-.CodeRay pre {
-  padding: 6px 0 8px;
-  border: 0 none;
+pre.sourceCode {
+  padding: 6px 32px;
+  margin: 0 -32px 16px;
 }
 
 @media (max-width: 480px) {
-  .CodeRay pre {
-    padding: 6px 8px 8px;
+  pre.sourceCode {
+    padding: 6px 40px;
   }
 }

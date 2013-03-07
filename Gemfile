@@ -15,9 +15,8 @@ gem 'cache_digests'
 
 gem 'sitemap_generator'
 
-gem 'redcarpet'
+gem 'pandoc-ruby'
 gem 'nokogiri'
-gem 'coderay'
 gem 'diffy'
 
 gem 'devise'
