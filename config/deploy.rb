@@ -41,7 +41,6 @@ set :symlinks, [
 # Application Specific Tasks
 #   that should be performed at the end of each deployment
 def application_specific_tasks
-  system 'cap deploy:sitemap:refresh'
   system 'cap deploy:whenever:update'
 end
 
