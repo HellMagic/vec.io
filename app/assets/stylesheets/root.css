@@ -19,9 +19,15 @@
   height: 256px;
 }
 
-.user-profile .user-name {
+.user-profile .user-socials a {
+  color: #A7A7A7;
   font-size: 14px;
   line-height: 1.5em;
+  text-decoration: none;
+}
+
+.user-profile .user-socials a:hover {
+  color: #777777;
 }
 
 .user-profile .user-motivation {

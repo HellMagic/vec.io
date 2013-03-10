@@ -23,6 +23,12 @@ en:
       user_name: root@vec.io
       password: vec.io
 
+  socials:
+    twitter: cedricfung
+    github: vecio
+    google_plus: 115530211243475994661
+    facebook: cedric.vec.io
+
   google_analytics:
     account: UA-5406207-6
     domain: vec.io
